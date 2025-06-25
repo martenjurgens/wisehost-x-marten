@@ -46,10 +46,18 @@ Follow these steps to get the project up and running:
 
 6.  **Create SQLite Database File:**
     Ensure you have an empty SQLite database file.
+
     ```bash
     touch database/database.sqlite
     ```
+
     _(Note: On Windows, you might need to manually create an empty `database.sqlite` file inside the `database` folder if `touch` doesn't work.)_
+
+7.  **Run Migrations and Seed Database:**
+    This command will create the necessary database tables and populate them with initial data, including an admin user.
+    ```bash
+    php artisan migrate:fresh --seed
+    ```
 
 ## Running the Project
 
@@ -70,3 +78,8 @@ To run the project, you'll need two separate terminal windows.
     ```
 
 You should now be able to access the application in your web browser (usually at `http://localhost:8000`).
+
+## Admin Credentials
+
+- **Email:** `admin@wisehosting.ee`
+- **Password:** `password`
